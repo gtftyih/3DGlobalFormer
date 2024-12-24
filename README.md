@@ -8,7 +8,7 @@ Thank you for your interest, the code and checkpoints are being updated.
     dataset/:                           the folder for data loader.
     common/:                            the folder for basic functions.
     model/:                             the folder for 3DGlobalFormer network.
-    run_3dgf.py:                        the python code for 3DGlobalFormer networks training.
+    run_global.py:                        the python code for 3DGlobalFormer networks training.
 
 ## Environment
 Make sure you have the following dependencies installed:
