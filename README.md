@@ -23,3 +23,10 @@ We set up the Human3.6M dataset in the same way as [VideoPose3D](https://github.
 ### MPI-INF-3DHP
 We set up the MPI-INF-3DHP dataset in the same way as [P-STMO](https://github.com/paTRICK-swk/P-STMO). 
 
+## Evaluation
+You can download our pre-trained models from [Google Drive](https://drive.google.com/drive/folders/1MHIbJ82_IllUKwPuFA2zLmxcwV9p957a?usp=drive_link). Put them in the ./checkpoint directory.
+### Human3.6M
+To evaluate our 3DGlobalFormer model on the 2D keypoints obtained by CPN, please run:
+```bash
+ python run_global.py -f 243 -b 128 --train 0 --layers 6 -s 1 -k 'cpn_ft_h36m_dbb' --reload 1 --previous_dir ./checkpoint/your_best_epoch.pth
+```
