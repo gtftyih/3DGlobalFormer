@@ -30,3 +30,8 @@ To evaluate our 3DGlobalFormer model on the 2D keypoints obtained by CPN, please
 ```bash
  python run_global.py -f 243 -b 128 --train 0 --layers 6 -s 1 -k 'cpn_ft_h36m_dbb' --reload 1 --previous_dir ./checkpoint/your_best_epoch.pth
 ```
+### MPI-INF-3DHP
+The pre-trained models and codes for 3DGlobalFormer are currently undergoing updates. In the meantime, you can run this code to observe the results for 81 frames:
+```bash
+ python run_3dhp_global.py -f 81 -b 128 --train 0 --layers 6 -s 1 --reload 1 --previous_dir ./checkpoint/your_best_epoch.pth
+```
