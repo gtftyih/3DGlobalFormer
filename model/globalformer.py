@@ -146,7 +146,7 @@ class Temperol_Attention(nn.Module):
         self.conv2d = nn.Conv2d(d_coor, d_coor, kernel_size=3, stride=1, padding=1, groups=d_coor)
         self.pool2d = nn.MaxPool2d(kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
         self.drop = DropPath(0.5)   
-        self.LP = d_time // 3
+        self.LP = 9
         self.freqmlp = FreqSH(channel_ratio=d_time, input_dim=d_coor, freq_ratio=4, LP=self.LP, drop=0.) 
 
     def forward(self, x):
