@@ -27,6 +27,7 @@ We set up the MPI-INF-3DHP dataset in the same way as [P-STMO](https://github.co
 You can download our pre-trained models from [Google Drive](https://drive.google.com/drive/folders/1MHIbJ82_IllUKwPuFA2zLmxcwV9p957a?usp=drive_link). Put them in the ./checkpoint directory.
 ### Human3.6M
 To evaluate our 3DGlobalFormer model on the 2D keypoints obtained by CPN, please run:
+
 3DGlobalFormer-S:
 ```bash
  python run_global.py -f 27 -b 128 --d_hid 128 --train 0 --layers 6 -s 1 -k 'cpn_ft_h36m_dbb' --reload 1 --previous_dir ./checkpoint/your_best_epoch.pth
@@ -47,6 +48,7 @@ The pre-trained models and codes for 3DGlobalFormer are currently undergoing upd
 ## Training from scratch
 ### Human3.6M
 To train Module Scale of 3DGlobalFormer, please run:
+
 3DGlobalFormer-S:
 ```bash
  python run_global.py -f 27 -b 128 --d_hid 128 --train 1 --layers 6 -s 3
@@ -62,6 +64,7 @@ To train Module Scale of 3DGlobalFormer, please run:
 
 ## Visulization
 Accroding MHFormer, make sure to download the YOLOv3 and HRNet pretrained models [here](https://drive.google.com/drive/folders/1_ENAMOsPM7FXmdYRbkwbFHgzQq_B_NQA) and put it in the './demo/lib/checkpoint' directory firstly. Then, you need to put your in-the-wild videos in the './demo/video' directory.
+
 You can modify the 'get_pose3D' function in the 'vis.py' script according to your needs, including the checkpoint and model parameters, and then execute the following command:
 ```bash
  python demo/vis.py --video sample_video.mp4
