@@ -10,8 +10,8 @@ Thank you for your interest, the code and checkpoints are being updated.
     model/:                             the folder for 3DGlobalFormer network.
     demo/:                              the folder for visulization.
     run_global.py:                      the python code for 3DGlobalFormer-S and 3DGlobalFormer-B networks training and testing.
-    run_global_L.py:                    the python code for 3DGlobalFormer-L network training and testing.
-    run_3dhp_global.py:                 the python code for 3DGlobalFormer-B network tra1ining and testing on the MPI-INF-3DHP dataset.
+    run_global_L.py:                    the python code for 3DGlobalFormer-L networks training and testing.
+    run_3dhp_global.py:                 the python code for tra1ining and testing on the MPI-INF-3DHP dataset.
 
 ## Environment
 Make sure you have the following dependencies installed:
@@ -66,7 +66,6 @@ To train our 3DGlobalFormer model on the 2D keypoints obtained by CPN, please ru
 ```
 ### MPI-INF-3DHP
 To train our 3DGlobalFormer model, please run:
-3DGlobalFormer-S:
 ```bash
  python run_3dhp_global.py -f 81 -b 128 --train 1 --layers 6 -s 1
 ```
